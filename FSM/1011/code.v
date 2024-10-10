@@ -1,5 +1,7 @@
-/*Design a finite state machine to detect a 1011 sequence in verilog.
- Also write its testbench to verify your design.*/
+/*Design a finite state machine to detect a 1011 sequence in verilog. Also write its testbench to verify your design.*/
+
+ // For the design, I’m using non-overlapping Moore method. 
+ //2^2 = 4 hence 2-bit numbers can only provide us with 4 states while we are using 5 states hence, we use 2^3 = 8.
 
 module sequence_detector(clk,rst,sequence_in,detected_out);
   input clk,rst,sequence_in;
