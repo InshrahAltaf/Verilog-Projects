@@ -14,7 +14,6 @@ begin
         A = 4'b0000;         //initially 0
         Q_1 = 0;             //initially 0
         X = {A, Q, Q_1};     //arithmetic right shift
-
     end
     else
     if (c > 0)
