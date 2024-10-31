@@ -54,20 +54,20 @@ module Vending_Machine(product,coin,clk,rst);
         S10:                        //10 coins received; state 2
         if (coin == 0)              //if 0 coins are inserted
         begin
-            next_state = S10;        //10 + 0 = 10 cents
+            next_state = S10;       //10 + 0 = 10 cents
             product = 0;
         end
         else
-        if (coin == 2'b01)           //if 5 coins are inserted 
+        if (coin == 2'b01)          //if 5 coins are inserted 
         begin
-            next_state = S0;         // 10 + 5 = 15 cents; FSM back to state 0
-            product = 1;             // product is dispensed 
+            next_state = S0;        // 10 + 5 = 15 cents; FSM back to state 0
+            product = 1;            // product is dispensed 
         end
         else
-        if (coin == 2'b10)           //if 10 coins are inserted
+        if (coin == 2'b10)          //if 10 coins are inserted
         begin
-            next_state = S0;         // 10 + 10 = 20 cents; FSM back to state 0
-            product = 1;             // product is dispensed 
+            next_state = S0;        // 10 + 10 = 20 cents; FSM back to state 0
+            product = 1;            // product is dispensed 
         end
         endcase
     end
